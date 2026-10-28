@@ -160,14 +160,19 @@ export default function Page() {
             </div>
           </div>
         <div className="hero-photo intro-book">
-          <Image
-            src={HERO_IMAGE.src}
-            alt="Un homme souriant tient le guide « Investir dans l’immobilier au Bénin — Le guide complet »"
-            fill
-            priority
-            sizes="100vw"
-            className="hero-photo-img"
-          />
+          <picture>
+            <source media="(min-width: 860px)" srcSet={HERO_IMAGE.src} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={HERO_IMAGE.mobileSrc}
+              alt="Un homme souriant tient le guide « Investir dans l’immobilier au Bénin — Le guide complet »"
+              width={HERO_IMAGE.width}
+              height={HERO_IMAGE.height}
+              fetchPriority="high"
+              decoding="async"
+              className="hero-photo-img"
+            />
+          </picture>
         </div>
         </section>
 
@@ -373,7 +378,8 @@ export default function Page() {
                   src={OFFER_IMAGE.src}
                   alt="Un homme souriant présente le guide « Investir dans l’immobilier au Bénin »"
                   fill
-                  sizes="(max-width: 860px) 100vw, 440px"
+                  sizes="(max-width: 860px) 92vw, 460px"
+                  quality={90}
                   className="offer-photo-img"
                 />
               </Reveal>

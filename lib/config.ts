@@ -1,6 +1,6 @@
 // ⚠️ À MODIFIER : colle ici le lien de la boutique Chariow.
 // Tous les boutons "Obtenir le guide" du site pointent vers cette valeur.
-export const CHARIOW_URL = "https://REMPLACER-PAR-LE-LIEN-CHARIOW";
+export const CHARIOW_URL = "https://le-temoignage.mychariow.market/prd_kfewwth0";
 
 export const SITE = {
   title: "Investir dans l’immobilier au Bénin — Le guide complet",
@@ -36,8 +36,8 @@ export const PRODUCT_IMAGE = { src: "/product-book.png", width: 281, height: 436
 
 // Image du hero (en haut de page) et image de la section « Choisis ta formule ».
 // Pour changer : déposer le fichier dans /public et mettre ses dimensions réelles (px).
-export const HERO_IMAGE = { src: "/hero-photo.jpg", width: 2000, height: 1116 };
-export const OFFER_IMAGE = { src: "/offer-photo.jpg", width: 1800, height: 1004 };
+export const HERO_IMAGE = { src: "/hero-photo.jpg", mobileSrc: "/hero-photo-mobile.jpg", width: 1100, height: 1144 };
+export const OFFER_IMAGE = { src: "/offer-photo.jpg", width: 1200, height: 1200 };
 
 // ---- OFFRE PROMOTIONNELLE ----
 // ⚠️ endsAt : date/heure RÉELLE de fin de la promo (fuseau Bénin, +01:00).
