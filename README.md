@@ -24,4 +24,4 @@ Vercel : importer le dossier, aucune variable d’environnement requise.
 
 ## Promo et chiffres
 - `lib/config.ts` → `PROMO.endsAt` : heure réelle de fin de la promo (+01:00). Après cette heure, le site affiche seul les prix normaux (16 000 / 55 000) : modifier aussi les prix sur Chariow.
-- `STATS.buyers` : total des ventes tous canaux (Chariow + guides physiques), à mettre à jour à la main. `STATS.positiveReviews` : null = carte masquée.
+- `STATS.buyers` : total des ventes tous canaux (Chariow + guides physiques), à mettre à jour à la main. `STATS.reviews` (nombre d’avis reçus) : null = carte masquée.

@@ -34,6 +34,11 @@ export const WA_ACCOMPAGNEMENT = waLink(
 // puis changer src, width et height ci-dessous (dimensions réelles de l'image).
 export const PRODUCT_IMAGE = { src: "/product-book.png", width: 281, height: 436 };
 
+// Image du hero (en haut de page) et image de la section « Choisis ta formule ».
+// Pour changer : déposer le fichier dans /public et mettre ses dimensions réelles (px).
+export const HERO_IMAGE = { src: "/hero-photo.jpg", width: 2000, height: 1116 };
+export const OFFER_IMAGE = { src: "/offer-photo.jpg", width: 1800, height: 1004 };
+
 // ---- OFFRE PROMOTIONNELLE ----
 // ⚠️ endsAt : date/heure RÉELLE de fin de la promo (fuseau Bénin, +01:00).
 // Pour une promo de 12 h : mettre l'heure de lancement + 12 h.
@@ -50,5 +55,5 @@ export const PROMO = {
 // À mettre à jour à la main quand le total change. null = la carte est masquée.
 export const STATS = {
   buyers: 200 as number | null,
-  positiveReviews: null as string | null, // ex : "100%" → « 100% d’avis positifs »
+  reviews: 30 as number | null, // nombre d’avis reçus (« 30+ avis déjà reçus »)
 };

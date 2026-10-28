@@ -3,9 +3,10 @@ import Reveal from "@/components/Reveal";
 import Faq, { type FaqItem } from "@/components/Faq";
 import CountUp from "@/components/CountUp";
 import Dock from "@/components/Dock";
+import MobileMenu from "@/components/MobileMenu";
 import PromoPrice, { MiniCountdown, PromoBanner } from "@/components/Promo";
 import { testimonials } from "@/lib/testimonials";
-import { CHARIOW_URL, PRODUCT_IMAGE, SITE, STATS, WA_ACCOMPAGNEMENT, WA_DEDICACE } from "@/lib/config";
+import { CHARIOW_URL, HERO_IMAGE, OFFER_IMAGE, SITE, STATS, WA_ACCOMPAGNEMENT, WA_DEDICACE } from "@/lib/config";
 
 const preparer = [
   { t: "L’achat d’un terrain", d: "Les précautions à prendre et les vérifications à envisager avant de t’engager." },
@@ -64,7 +65,7 @@ const plans: {
 
 const statCards = [
   STATS.buyers != null && { v: `${STATS.buyers}+`, l: "lecteurs ont déjà acheté le guide", count: { to: STATS.buyers, suffix: "+" } },
-  STATS.positiveReviews && { v: STATS.positiveReviews, l: "d’avis positifs" },
+  STATS.reviews != null && { v: `${STATS.reviews}+`, l: "avis déjà reçus", count: { to: STATS.reviews, suffix: "+" } },
   { v: "148", l: "pages de contenu, en PDF", count: { to: 148, suffix: "" } },
   { v: "0 attente", l: "accès immédiat après l’achat du PDF", accent: true },
 ].filter(Boolean) as { v: string; l: string; accent?: boolean; count?: { to: number; suffix: string } }[];
@@ -124,7 +125,8 @@ export default function Page() {
             <a href="#offre">Formules</a>
             <a href="#faq">Questions</a>
           </nav>
-          <Cta>Obtenir le guide</Cta>
+          <a className="btn btn-gold nav-cta" href={CHARIOW_URL}>Obtenir le guide</a>
+          <MobileMenu />
         </div>
       </header>
       </div>
@@ -156,19 +158,17 @@ export default function Page() {
                 Par <b>{SITE.author}</b>, fondateur de {SITE.brand}
               </p>
             </div>
-            <div className="hero-book intro-book">
-              <div className="book-glow" aria-hidden />
-              <Image
-                src={PRODUCT_IMAGE.src}
-                alt="Couverture du guide « Investir dans l’immobilier au Bénin — Le guide complet »"
-                width={PRODUCT_IMAGE.width}
-                height={PRODUCT_IMAGE.height}
-                priority
-                className="book-img"
-                sizes="(max-width: 860px) 70vw, 380px"
-              />
-            </div>
           </div>
+        <div className="hero-photo intro-book">
+          <Image
+            src={HERO_IMAGE.src}
+            alt="Un homme souriant tient le guide « Investir dans l’immobilier au Bénin — Le guide complet »"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-photo-img"
+          />
+        </div>
         </section>
 
         {/* CHIFFRES */}
@@ -368,13 +368,13 @@ export default function Page() {
             </Reveal>
 
             <div className="offer">
-              <Reveal className="offer-book">
+              <Reveal className="offer-photo">
                 <Image
-                  src={PRODUCT_IMAGE.src}
-                  alt="Le guide « Investir dans l’immobilier au Bénin — Le guide complet »"
-                  width={PRODUCT_IMAGE.width}
-                  height={PRODUCT_IMAGE.height}
-                  sizes="(max-width: 860px) 60vw, 300px"
+                  src={OFFER_IMAGE.src}
+                  alt="Un homme souriant présente le guide « Investir dans l’immobilier au Bénin »"
+                  fill
+                  sizes="(max-width: 860px) 100vw, 440px"
+                  className="offer-photo-img"
                 />
               </Reveal>
               <Reveal delay={0.1} className="offer-card">
