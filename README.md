@@ -21,3 +21,7 @@ Vercel : importer le dossier, aucune variable d’environnement requise.
 - `lib/config.ts` : `WHATSAPP_NUMBER` (à confirmer), messages WhatsApp préremplis, `PRODUCT_IMAGE` (image du produit Chariow : enregistrer dans `public/` puis changer `src`, `width`, `height`).
 - `components/Dock.tsx` : barre toujours visible (mobile : 2 boutons ; ordinateur : pastille WhatsApp flottante).
 - `lib/testimonials.ts` : témoignages FICTIFS à remplacer par de vrais avis avant la mise en ligne.
+
+## Promo et chiffres
+- `lib/config.ts` → `PROMO.endsAt` : heure réelle de fin de la promo (+01:00). Après cette heure, le site affiche seul les prix normaux (16 000 / 55 000) : modifier aussi les prix sur Chariow.
+- `STATS.buyers` : total des ventes tous canaux (Chariow + guides physiques), à mettre à jour à la main. `STATS.positiveReviews` : null = carte masquée.
