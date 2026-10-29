@@ -45,7 +45,7 @@ export const OFFER_IMAGE = { src: "/offer-photo.jpg", width: 1200, height: 1200 
 // Une fois cette date passée, le site affiche automatiquement les prix normaux
 // (pense alors à remettre aussi les prix normaux sur Chariow).
 export const PROMO = {
-  endsAt: "2026-10-29T12:00:00+01:00",
+  endsAt: "2026-10-30T17:00:00+01:00",
   pdf: { promo: "9 500", regular: "16 000" },
   ded: { promo: "22 400", regular: "55 000" },
 };
