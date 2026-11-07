@@ -7,7 +7,7 @@ export const SITE = {
   author: "Francis BABAKPIKPA",
   brand: "FOGIC",
   brandFull: "Fortune et Grandeur Immobilier et Construction",
-  price: "9 500 FCFA",
+  price: "15 900 FCFA",
   format: "Livre numérique PDF",
   phones: [
     { label: "+229 01 61 12 59 16", tel: "+2290161125916", wa: "2290161125916" },
@@ -45,9 +45,9 @@ export const OFFER_IMAGE = { src: "/offer-photo.jpg", width: 1200, height: 1200 
 // Une fois cette date passée, le site affiche automatiquement les prix normaux
 // (pense alors à remettre aussi les prix normaux sur Chariow).
 export const PROMO = {
-  endsAt: "2026-11-07T21:40:31+01:00",
-  pdf: { promo: "9 500", regular: "16 000" },
-  ded: { promo: "22 400", regular: "55 000" },
+  endsAt: "2026-11-12T23:59:00+01:00",
+  pdf: { promo: "15 900", regular: "32 000" },
+  ded: { promo: "39 300", regular: "55 000" },
 };
 
 // ---- CHIFFRES AFFICHÉS ----
